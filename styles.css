@@ -1,0 +1,424 @@
+/* Основные стили */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background: rgb(246,223,196);
+  color: #3A261E;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Навигация по сайту */
+
+.navbar {
+  background: linear-gradient(to right, rgb(108,81,136), rgb(189,93,54));
+}
+
+.nav-links {
+  max-height: 0;
+  transition: max-height 0.4s ease;
+  overflow: hidden;
+}
+
+.nav-links.active {
+  max-height: 400px;
+}
+
+.nav-links a {
+  text-align: center;
+  display: inline-block;
+}
+
+.navbar a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: calc(12px + 0.5vw);
+  font-weight: 500;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 1vw;
+  width: 100%;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #3A261E;
+}
+
+.nav-btn {
+  background: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  border: 0;
+  padding: 0 20px;
+}
+
+.nav-btn.active .open-menu {
+  display: none;
+}
+
+.nav-btn.active .close-menu {
+  display: block;
+}
+
+.nav-btn .close-menu {
+  display: none;
+} 
+
+/* Разделение сегментов */
+
+hr {
+  padding: 2vw;
+  background-color: rgb(108,81,136);
+}
+
+/* Приветственный баннер */
+
+.banner {
+  background-image: url("images/dragon.png");
+  color: #3A261E;
+  height: 50vw;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120%;
+  background-position: right 1;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  right: 0;
+}
+
+.logo img {
+  height: 5vw;
+}
+
+.banner h1 {
+  max-width: 50vw;
+  font-size: 5vw;
+  margin-bottom: 3vw;
+  font-weight: 700;
+  bottom: 0;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: "Cascadia Mono", sans-serif;
+  font-weight: 600;
+}
+
+/* Слоган */
+
+.slogan {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  height: 30vw;
+}
+
+.slogan img {
+  height: 25vw;
+  width: 25vw;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.slogan p {
+  margin-top: calc(50px + 5vw);
+  color: #3A261E;
+  text-align: center;
+  font-family: "Cascadia Mono", sans-serif;
+  font-weight: 400;
+  font-size: calc(6px + 2.0vw);
+  width: 50vw;
+  position: absolute;
+}
+
+/* Функциональное описание */
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px 0;
+  gap: 15px;
+}
+
+.features img {
+  width: 20vw;
+}
+
+/* Карта */
+
+.map {
+  padding: 5vw;
+}
+
+.map img {
+  text-align: center;
+  border-radius: 15px;
+  width: 80vw;
+}
+
+.map p {
+  color: #3A261E;
+  text-align: center;
+  font-family: "Cascadia Mono", sans-serif;
+  font-weight: 200;
+  font-size: calc(12px + 2.0vw);
+  width: 100%;
+  margin-bottom: 5vw;
+}
+
+.edge {
+  height: 15vw;
+  width: 15vw;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.animals p {
+  margin-top: calc(12px + 2.0vw);
+  color: #3A261E;
+  font-family: "Cascadia Mono", sans-serif;
+  font-weight: 400;
+  font-size: calc(12px + 2.0vw);
+  width: 100%;
+}
+
+.animals .title {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  height: 15vw;
+}
+
+.carousel {
+  margin: auto;
+  justify-content: space-around;
+}
+
+#animals .item {
+  margin-right: 20px; /* задаёт отступ между слайдами */
+}
+
+#animals .owl-wrapper-outer {
+  overflow: hidden;
+}
+
+#animals .owl-wrapper {
+  display: flex; /* помогает убрать лишние пробелы */
+}
+
+.carousel img {
+  width: 400px;
+  height: 550px;
+  border-radius: 15%;
+  object-fit: cover;
+  border: px solid transparent;
+  transition: all .5s;
+}
+
+.item:hover img {
+  border: 6px solid rgb(243, 159, 123);
+}
+
+.item h3 {
+  width: 100%;
+  text-align: center;
+}
+
+/* Посетители */
+
+
+.visitors p {
+  color: #3A261E;
+  text-align: center;
+  font-family: "Cascadia Mono", sans-serif;
+  font-weight: 400;
+  font-size: calc(12px + 2.0vw);
+  width: 100%;
+  margin-bottom: 5vw;
+}
+
+.visitors .info {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  height: 15vw;
+  width: 100%;
+}
+
+.visitors .visitor {
+  margin: 20px;
+  width: calc(400px + 10vw);
+}
+
+/* Билеты */
+
+.tickets {
+  margin-bottom: 4vw;
+}
+
+.tickets p {
+  margin-top: calc(20px + 3vw);
+  color: #3A261E;
+  text-align: center;
+  font-family: "Cascadia Mono", sans-serif;
+  font-weight: 400;
+  font-size: calc(12px + 2.0vw);
+  width: 100%;
+  top: 0;
+  position: absolute;
+  margin-bottom: 5vw;
+}
+
+.tickets-info {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  height: 15vw;
+}
+
+.ticket {
+  height: calc(25px + 3.0vw);
+  font-family: "Cascadia Mono", sans-serif;
+  font-weight: 400;
+  font-size: calc(10px + 2.0vw);
+  color: rgb(246,223,196);
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  margin-top: 1vw;
+  border-radius: 20px;
+  text-align: left;
+}
+
+.standard {
+  background-color: rgb(190,93,53);
+}
+
+.kid {
+  background-color: rgb(108,81,136);
+}
+
+.student {
+  background-color: rgb(106,113,180);
+}
+
+/* Регистрация */
+
+.registration p {
+  color: #3A261E;
+  text-align: center;
+  font-family: "Cascadia Mono", sans-serif;
+  font-weight: 400;
+  font-size: calc(10px + 2.0vw);
+  width: 100%;
+}
+
+.info {
+  width: 60vw;
+}
+
+.registration img {
+  width: 25vw;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.registration {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  height: 50vw;
+}
+
+.order-button {
+  background-color: #6f6fb6;
+  color: #fcead4;
+  font-family: 'Arial', sans-serif;
+  font-size: calc(12px + 2.0vw);
+  height: calc(20px + 5.0vw);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-top: calc(20px + 5.0vw);
+  transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #5d5da3
+}
+
+/* Футер сайта */
+
+.footer {
+  background: linear-gradient(to right, rgb(108,81,136), rgb(189,93,54));
+  margin: 0;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 1vw;
+}
+
+.footer h1, p {
+  font-family: "Cascadia Mono", sans-serif;
+  font-weight: 100;
+  width: 15vw;
+  min-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  font-size: calc(12px + 0.5vw);
+}
+
+/* Адаптивность */
+@media (min-width: 768px) {
+  .nav-links {
+    all: initial;
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+}
